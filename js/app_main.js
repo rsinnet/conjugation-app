@@ -6,12 +6,10 @@ $(document).ready(function() {
 	       for (var i = 3; i >= 0; --i)
 	       {
 		   var cell = document.createElement("td");
-		   //cell.innerText = VerbClassXXX.ConjugateByRuleIndex(verb, i);
-		   //verbRow.appendChild(cell);
-
-		   //cell = document.createElement("td");
+		   cell.className = "verb-cell"
+		   
 		   var textBox = document.createElement("input");
-		   textBox.setAttribute.className = "hebrew-verb";
+		   textBox.className = "hebrew-verb";
 		   textBox.tabIndex = 4*verbIndex + i+1;
 		   textBox.setAttribute("type", "text");
 		   textBox.setAttribute("ng-model", "conj.text" + i);
@@ -28,7 +26,8 @@ $(document).ready(function() {
 	       // Add the word root
 	       var cell = document.createElement("td");
 	       cell.innerText = verb.root;
-	       cell.title = "Whoa nelly!"
+	       cell.title = verb.translation;
+	       cell.className = "verb-root-cell";
 	       verbRow.appendChild(cell);
 
 	       $("#verbTableBody").append(verbRow);

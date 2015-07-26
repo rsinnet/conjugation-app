@@ -1,3 +1,16 @@
+.verb-cell
+{
+    width: 5em;
+    text-align: right;
+    font-weight: 600;
+}
+.verb-root-cell
+{
+    width: 5em;
+    text-align: right;
+    font-weight: 600;
+}
+
 .hebrew-verb
 {
     width: 5em;

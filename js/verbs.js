@@ -78,5 +78,12 @@ VerbClassXXX.rules =
 var verbsXXX =
     [
 	new Verb("אהב", "love, like, adore"),
-	new Verb("אבד", "be lost; perish")
+	new Verb("אבד", "be lost; perish"),
+	new Verb("אחז", "hold, grasp; seize; possess"),
+	new Verb("אכל", "eat; burn, destroy; consume"),
+	new Verb("אמר", "say, tell; mean; express; praise"),
+	new Verb("אנס", "rape; force; coerce"),
+	new Verb("אסף", "collect, gather, assemble"),
+	new Verb("אסר", "arrest, imprison, shackle; forbit"),
+	new Verb("בגר", "mature, achieve adulthood (more formal than hitpa'el)")
     ];
