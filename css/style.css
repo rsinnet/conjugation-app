@@ -6,14 +6,14 @@
 }
 .verb-root-cell
 {
-    width: 5em;
+    width: 6em;
     text-align: right;
     font-weight: 600;
 }
 
 .hebrew-verb
 {
-    width: 5em;
+    width: 6em;
     direction: RTL;
     font-weight: 600;
 }
