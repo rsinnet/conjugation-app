@@ -1,0 +1,16 @@
+.hebrew-verb
+{
+    width: 5em;
+    direction: RTL;
+    font-weight: 600;
+}
+
+.red
+{
+    background-color: #ff6666;
+}
+
+.green
+{
+    background-color: #66ff66;
+}
