@@ -4,18 +4,35 @@
     text-align: right;
     font-weight: 600;
 }
+
 .verb-root-cell
 {
     width: 6em;
     text-align: right;
     font-weight: 600;
 }
+.verb-root-cell-header
+{
+    width: 4em;
+    text-align: center;
+    font-weight: 600;
+    font-size: 14pt;
+}
 
 .hebrew-verb
 {
-    width: 6em;
+    padding-right: 5px;
+    padding-left: 5px;
+    width: 4em;
     direction: RTL;
     font-weight: 600;
+}
+
+.hebrew-verb-pronoun
+{
+    padding-left: 5px;
+    padding-right: 5px;
+    direction: RTL;
 }
 
 .red
@@ -26,4 +43,8 @@
 .green
 {
     background-color: #66ff66;
+}
+
+@media print {
+    .pagebreak { height:0; page-break-before:always; margin:0; border-top:none; }
 }

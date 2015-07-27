@@ -3,7 +3,7 @@ angular.module('conjugationApp', [])
 	var conjugationRow = this;
 	conjugationRow.isCorrect = function(verbIndex, conjugationIndex)
 	{
-	    return (this["text" + conjugationIndex] == VerbClassXXX.ConjugateByRuleIndex(
+	    return (this["text" + conjugationIndex] == VerbClassXXX.conjugateByRuleIndex(
 		verbsXXX[verbIndex], conjugationIndex));
 	};
     });

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="conjugationApp">
   <head>
-n    <meta charset="utf-8">
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
@@ -29,7 +29,8 @@ n    <meta charset="utf-8">
     <script src="js/bootstrap.min.js"></script>
     <script src="js/underscore.js"></script>
     <script src="js/verbs.js"></script>
-    <script src="js/app_main.js"></script>
+    <script src="js/load_verbs.js"></script>
+    <script src="js/setup_random_verbs.js"></script>
     <script src="js/angular.js"></script>
     <script src="js/conjugation_check.js"></script>
     
@@ -38,32 +39,7 @@ n    <meta charset="utf-8">
     <center>
       <h1>Conjugation Practice</h1>
     </center>
-
-    <hr width="50%">
-
-    <div class="row">
-      <div class="col-md-12">
-	<center>
-	  <table class="table table-bordered" style="width: 2em;">
-	    <thead>
-	      <tr>
-		<td>אנחנו/אתן/חן</td>
-		<td>אנחנו/אתם/הם</td>
-		<td>אני/את/היא</td>
-		<td>אני/אתה/הוא</td>
-		<td>פועל</td>
-	      </tr>
-	    </thead>
-	    <tbody id="verbTableBody">
-	      <tr>
-		<td colspan="5" style="text-align: center; font-weight: 600;" >
-		  XXX
-		</td>
-	      </tr>
-	    </tbody>
-	  </table>
-	</center>
-      </div>
+    <div id="container">
     </div>
   </body>
 </html>
