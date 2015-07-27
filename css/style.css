@@ -16,7 +16,8 @@
     width: 4em;
     text-align: center;
     font-weight: 600;
-    font-size: 14pt;
+    font-size: 20pt;
+    padding: .5em;
 }
 
 .hebrew-verb
@@ -33,6 +34,13 @@
     padding-left: 5px;
     padding-right: 5px;
     direction: RTL;
+}
+
+.hebrew-translation-button
+{
+    display: inline-block;
+    width: 20em;
+    height: 5em;
 }
 
 .red
