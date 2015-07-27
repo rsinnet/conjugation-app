@@ -1,14 +1,32 @@
 "use strict";
 
+var replacements =
+    [
+	["מ", "ם"],
+	["צ", "ץ"],
+	["כ", "ך"],
+	["פ", "ף"]
+    ];
+
 // First, checks if it isn't implemented yet.
 if (!String.prototype.makeVerb) {
-  String.prototype.makeVerb = function(verb) {
-      return this.replace(/{(\d+)}/g, function(match, number) { 
-	  return typeof verb.root[number] != 'undefined'
-              ? verb.root[number]
-              : match;
-      });
-  };
+    String.prototype.makeVerb = function(verb) {
+	var str = this.replace(/{(\d+)}/g, function(match, number) { 
+	    return typeof verb.root[number] != 'undefined'
+		? verb.root[number]
+		: match;
+	});
+	_.each(replacements, function(reps) {
+	    str = str.replace(new RegExp(reps[0] + "$", "g"), function(match) {
+		return reps[1];
+	    });
+	    str = str.replace(new RegExp(reps[1] + "(.+)$", "g"), function(match, firstChar) {
+		return reps[0] + firstChar;
+	    });
+	});
+	
+	return str;	
+    };
 }
 
 class VerbClass
