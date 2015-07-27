@@ -1,6 +1,6 @@
 var makeVerbDiv = function(verb, verbIndex) {
     var divElem = document.createElement("div");
-    divElem.className="col-lg-2 col-md-4 col-sm-4 col-xs-6 pagebreak";
+    divElem.className="col-lg-2 col-md-4 col-sm-4 col-xs-6";
 
     var tableElem = document.createElement("table");
     tableElem.className = "table table-bordered";

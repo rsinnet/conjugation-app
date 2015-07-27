@@ -30,20 +30,6 @@ class VerbClass
     
 }
 
-class Verb
-    {
-	constructor(root, translation)
-	{
-	    this.root = root;
-	    this.translation = translation;
-	}
-	
-	get length()
-	{
-	    return root.length;
-	}
-    };
-
 var VerbClassXXX = new VerbClass("XXX");
 VerbClassXXX.rules =
     [
@@ -52,3 +38,44 @@ VerbClassXXX.rules =
 	"{0}ו{1}{2}ים",
 	"{0}ו{1}{2}ות"
     ];
+
+var VerbClassXVX = new VerbClass("XVX");
+VerbClassXVX.rules =
+    [
+	"{0}{2}",
+	"{0}{2}ה",
+	"{0}{2}ים",
+	"{0}{2}ות"
+    ];
+
+var VerbClassHXX = new VerbClass("HXX");
+VerbClassHXX.rules =
+    [
+	"{0}{1}ה",
+	"{0}{1}ה",
+	"{0}{1}ים",
+	"{0}{1}ות"
+    ];
+
+var VerbClasses =
+    {
+	"XXX": VerbClassXXX,
+	"XVX": VerbClassXVX,
+	"HXX": VerbClassHXX
+    };
+    
+
+class Verb
+    {
+	constructor(root, verbClass, translation)
+	{
+	    this.root = root;
+	    this.verbClass = VerbClasses[verbClass];
+	    this.translation = translation;
+	}
+	
+	get length()
+	{
+	    return root.length;
+	}
+    };
