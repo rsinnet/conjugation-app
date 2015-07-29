@@ -1,3 +1,43 @@
+span.flash-card-icon
+{
+    padding: .5em;
+}
+
+td.flash-card-score
+{
+    width: 3em;
+    text-align: right;
+    padding: .5em;
+}
+
+span.flash-card-score
+{
+    font-size: 16pt;
+    font-weight: 400;
+}
+
+.bgcolor-correct
+{
+    background-color: #008800;
+    color: #CCCCCC;
+}
+
+.bgcolor-incorrect
+{
+    background-color: #880000;
+    color: #CCCCCC;
+}
+
+.color-correct
+{
+    color: #008800;
+}
+
+.color-incorrect
+{
+    color: #880000;
+}
+
 .verb-cell
 {
     width: 5em;
@@ -41,6 +81,7 @@
     display: inline-block;
     width: 20em;
     height: 5em;
+    font-weight: 600;
 }
 
 .red
