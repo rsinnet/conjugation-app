@@ -5,7 +5,6 @@ span.flash-card-icon
 
 td.flash-card-score
 {
-    width: 3em;
     text-align: right;
     padding: .5em;
 }
@@ -88,7 +87,7 @@ span.flash-card-score
 {
     background-color: #ff6666;
 }
-
+.
 .green
 {
     background-color: #66ff66;

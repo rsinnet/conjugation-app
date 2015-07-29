@@ -174,7 +174,7 @@ var json = {
 	["פקח", "XXX", "open (eyes, ears) (tr.)"],
 	["פרט", "XXX", "break bill into smaller monetary units; separate out; give in detail (lit.)"],
 	["פרץ", "XXX", "break open, break into; burst into/out; break out; break through"],
-	["פרק", "XXX", "unload; resuce, deliver (lit.)"],
+	["פרק", "XXX", "unload; rescue, deliver (lit.)"],
 	["פרש", "XXX", "leave, withdraw, retire, secede; set sail (lit.)"],
 	["פשט", "XXX", "take off (clothes); extend (hand); stretch out; spread (out); raid"],
 	["פתח", "XXX", "open; begin, start"],

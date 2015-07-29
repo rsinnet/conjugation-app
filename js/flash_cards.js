@@ -3,8 +3,9 @@ var nIncorrect = 0;
 
 var correctAnswer;
 
-var shuffledVerbList = _.shuffle(verbsXXX);
-var verbIndex = 0;
+var shuffledVerbList = verbsXXX;
+var verbIndex;
+
 var repeat = false;
 
 var verbsMin = 0;
@@ -13,9 +14,17 @@ var verbsMax = verbsXXX.length - 1;
 var correctDict = {};
 var incorrectDict = {};
 
+function reshuffleVerbs()
+{
+    verbIndex = 0;
+    shuffledVerbList = _.shuffle(verbsXXX);
+}
+
 var updateFlashDiv = function() {
 
     var verb;
+    if (verbIndex > verbsMax)
+	reshuffleVerbs();
 
     if (!repeat)
 	verb = shuffledVerbList[verbIndex++];
@@ -37,10 +46,12 @@ var updateFlashDiv = function() {
 	random = Math.floor(Math.random()
 			    * (verbsMax - verbsMin + 1)) + verbsMin;
 
-	if (repeat && random == correctRandom || !repeat && random == verbIndex)
+	if (repeat && random == correctRandom)
+	    continue;
+	if (!repeat && random == verbIndex)
 	    continue;
 
-	verbs[++i] = verbsXXX[random];
+	verbs[++i] = shuffledVerbList[random];
     }
 
     var divElem = document.createElement("div");
@@ -135,5 +146,6 @@ function nextFlashCard()
 }
 
 $(document).ready(function() {
+    reshuffleVerbs();
     nextFlashCard();
 });
