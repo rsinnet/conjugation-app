@@ -50,6 +50,7 @@ span.flash-card-score
     text-align: right;
     font-weight: 600;
 }
+
 .verb-root-cell-header
 {
     width: 4em;
@@ -75,20 +76,26 @@ span.flash-card-score
     direction: RTL;
 }
 
-.hebrew-translation-button
+button.hebrew-translation-button
 {
     display: inline-block;
-    width: 20em;
-    height: 5em;
+    width: 100%;
+    height: 100%;
     font-weight: 600;
 }
 
-.red
+td.hebrew-translation-button
+{
+    width: 20em;
+    height: 5em;
+}
+
+.bg-red
 {
     background-color: #ff6666;
 }
-.
-.green
+
+.bg-green
 {
     background-color: #66ff66;
 }

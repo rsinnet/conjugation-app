@@ -10,11 +10,11 @@ $(document).ready(function() {
 	    textBox.className = "hebrew-verb";
 	    textBox.tabIndex = 4*verbIndex + i+1;
 	    textBox.setAttribute("type", "text");
-	    textBox.setAttribute("ng-model", "conj.text" + i);
+	    textBox.setAttribute("ng-model", "text" + i);
 	    textBox.setAttribute("ng-class",
-				 "{red : !conj.isCorrect("
+				 "{'bg-red' : !isCorrect("
 				 + verbIndex + ", " + i
-				 + "), green : conj.isCorrect("
+				 + "), 'bg-green' : isCorrect("
 				 + verbIndex + ", " + i + ")}");
 	    cell.appendChild(textBox);
 	    verbRow.appendChild(cell);

@@ -1,9 +1,9 @@
 var makeVerbDiv = function(verb, verbIndex) {
     var divElem = document.createElement("div");
-    divElem.className="col-lg-2 col-md-4 col-sm-4 col-xs-6";
+    divElem.className="col-lg-2 col-md-4 col-sm-4 col-xs-12";
 
     var tableElem = document.createElement("table");
-    tableElem.className = "table table-bordered";
+    tableElem.className = "center-block";
     tableElem.setAttribute("ng-controller", "ConjugationController as conj");
     tableElem.style = "width: 2em;";
 
@@ -34,11 +34,11 @@ var makeVerbDiv = function(verb, verbIndex) {
 	textBox.className = "hebrew-verb";
 	textBox.tabIndex = 4*verbIndex + i+1;
 	textBox.setAttribute("type", "text");
-	textBox.setAttribute("ng-model", "conj.text" + i);
+	textBox.setAttribute("ng-model", "text" + i);
 	textBox.setAttribute("ng-class",
-			     "{red : !conj.isCorrect("
+			     "{'bg-red' : !isCorrect("
 			     + verbIndex + ", " + i
-			     + "), green : conj.isCorrect("
+			     + "), 'bg-green' : isCorrect("
 			     + verbIndex + ", " + i + ")}");
 	tdElem.appendChild(textBox);
 	trElem.appendChild(tdElem);
